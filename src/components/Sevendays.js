@@ -90,6 +90,7 @@ function Sevendays({ forecast }) {
           <div
             style={{
               display: "flex",
+              flexWrap: "wrap",
               margin: "30px",
               alignItems: "center",
               justifyContent: "space-between",
