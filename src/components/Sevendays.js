@@ -2,8 +2,6 @@ import React from "react";
 import icon from "./WeatherLogo";
 
 function Sevendays({ forecast }) {
-  <icon />;
-
   let daily = [];
 
   const days = [
