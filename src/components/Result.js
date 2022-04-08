@@ -31,7 +31,7 @@ function Result({ data, forecast }) {
         </div>
         {icon(data.weather[0].icon, 140)}
         <p
-          className={data.main.temp.toFixed(0) > 23 && "red"}
+          className={data.main.temp.toFixed(0) > 23 ? "red" : ""}
           style={{ fontSize: "20px" }}
         >
           {data.main.temp.toFixed(0)}
