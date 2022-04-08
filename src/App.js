@@ -16,13 +16,17 @@ function App() {
   const API_Key = "4a29cf92778614560202a2847757e184";
 
   const getData = async () => {
-    const req = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${API_Key}`
-    );
-    const res = await req.json();
-    setData(res);
-    setLat(res.coord.lat);
-    setLon(res.coord.lon);
+    try {
+      const req = await fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=${API_Key}`
+      );
+      const res = await req.json();
+      setData(res);
+      setLat(res.coord.lat);
+      setLon(res.coord.lon);
+    } catch {
+      alert("try again with correct values");
+    }
   };
 
   useEffect(() => {
