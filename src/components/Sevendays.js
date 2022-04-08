@@ -52,7 +52,7 @@ function Sevendays({ forecast }) {
               <p>{icon(f && f.weather[0].icon, 50)}</p>
             </div>
             <>
-              <p>{`${days[new Date(f && f.dt * 1000).getDay()]}`}</p>
+              <p>{days[new Date(f && f.dt * 1000).getDay()]}</p>
             </>
 
             <>
