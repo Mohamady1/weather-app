@@ -2,6 +2,7 @@ import React from "react";
 import icon from "./WeatherLogo";
 
 function Sevendays({ forecast }) {
+  //make array to store Seven days only from API not Eight days
   let daily = [];
 
   const days = [
