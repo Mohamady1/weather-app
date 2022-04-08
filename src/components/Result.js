@@ -93,7 +93,7 @@ function Result({ data, forecast }) {
         <div
           style={{
             display: "flex",
-            width: "60%",
+            width: "70%",
             justifyContent: "space-between",
             gap: "10px",
           }}
