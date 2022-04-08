@@ -4,6 +4,7 @@ import icon from "./WeatherLogo";
 function Sevendays({ forecast }) {
   //make array to store Seven days only from API not Eight days
   let daily = [];
+  let id = 0;
 
   const days = [
     "Sunday",
@@ -34,6 +35,7 @@ function Sevendays({ forecast }) {
       ) : (
         daily.map((f) => (
           <div
+            key={++id}
             style={{
               display: "flex",
               flexWrap: "wrap",
