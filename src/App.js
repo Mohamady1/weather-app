@@ -13,8 +13,6 @@ function App() {
   const [lon, setLon] = useState(0);
   const [query, setQuery] = useState("");
 
-  console.log(lat, lon);
-
   const API_Key = "4a29cf92778614560202a2847757e184";
 
   const getData = async () => {
@@ -25,7 +23,6 @@ function App() {
     setData(res);
     setLat(res.coord.lat);
     setLon(res.coord.lon);
-    console.log(res);
   };
 
   useEffect(() => {
