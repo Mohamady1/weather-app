@@ -57,7 +57,7 @@ function Result({ data, forecast }) {
         </div>
       </div>
       <div style={{ marginTop: "70px" }}>
-        <Sevendays icon={icon} forecast={forecast} />
+        <Sevendays forecast={forecast} />
       </div>
     </div>
   );
