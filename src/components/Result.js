@@ -30,7 +30,10 @@ function Result({ data, forecast }) {
           <Flag flag={data.sys.country} />
         </div>
         {icon(data.weather[0].icon, 140)}
-        <p>
+        <p
+          className={data.main.temp.toFixed(0) > 23 && "red"}
+          style={{ fontSize: "20px" }}
+        >
           {data.main.temp.toFixed(0)}
           <sup>o</sup> C
         </p>

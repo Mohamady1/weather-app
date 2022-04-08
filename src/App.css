@@ -30,6 +30,11 @@ body {
   width: 220px;
 }
 
+.red {
+  color: red;
+  border-bottom: 2px dotted red;
+}
+
 .loop {
   animation: rotate 3s infinite linear;
 }
