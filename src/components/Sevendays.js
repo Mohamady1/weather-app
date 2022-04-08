@@ -1,61 +1,8 @@
 import React from "react";
-import {
-  BsFillSunFill,
-  BsCloudsFill,
-  BsSnow,
-  BsCloudDrizzleFill,
-  BsFillMoonFill,
-  BsCloudSunFill,
-  BsCloudMoonFill,
-  BsCloudRainFill,
-  BsCloudRainHeavyFill,
-  BsFillCloudFogFill,
-  BsQuestionLg,
-} from "react-icons/bs";
+import icon from "./WeatherLogo";
 
 function Sevendays({ forecast }) {
-  const icon = (params) => {
-    switch (params) {
-      case "01d":
-        return <BsFillSunFill size={50} color="rgb(255, 196, 0)" />;
-      case "01n":
-        return <BsFillMoonFill size={50} />;
-      case "02d":
-        return <BsCloudSunFill size={50} />;
-      case "02n":
-        return <BsCloudMoonFill size={50} />;
-      case "03d":
-        return <BsCloudsFill size={50} />;
-      case "03n":
-        return <BsCloudsFill size={50} />;
-      case "04d":
-        return <BsCloudsFill size={50} />;
-      case "04n":
-        return <BsCloudsFill size={50} />;
-      case "09d":
-        return <BsCloudDrizzleFill size={50} />;
-      case "09n":
-        return <BsCloudDrizzleFill size={50} />;
-      case "10d":
-        return <BsCloudRainFill size={50} />;
-      case "10n":
-        return <BsCloudRainFill size={50} />;
-      case "011d":
-        return <BsCloudRainHeavyFill size={50} />;
-      case "011n":
-        return <BsCloudRainHeavyFill size={50} />;
-      case "13d":
-        return <BsSnow size={50} />;
-      case "13n":
-        return <BsSnow size={50} />;
-      case "50d":
-        return <BsFillCloudFogFill size={50} />;
-      case "50n":
-        return <BsFillCloudFogFill size={50} />;
-      default:
-        return <BsQuestionLg size={50} />;
-    }
-  };
+  <icon />;
 
   let daily = [];
 
@@ -101,7 +48,7 @@ function Sevendays({ forecast }) {
                 textAlign: "center",
               }}
             >
-              <p>{icon(f && f.weather[0].icon)}</p>
+              <p>{icon(f && f.weather[0].icon, 50)}</p>
             </div>
             <>
               <p>{`${days[new Date(f && f.dt * 1000).getDay()]}`}</p>

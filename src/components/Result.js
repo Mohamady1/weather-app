@@ -1,64 +1,9 @@
 import React from "react";
 import Flag from "./Flag";
-import {
-  BsFillSunFill,
-  BsCloudsFill,
-  BsSnow,
-  BsCloudDrizzleFill,
-  BsFillMoonFill,
-  BsCloudSunFill,
-  BsCloudMoonFill,
-  BsCloudRainFill,
-  BsCloudRainHeavyFill,
-  BsFillCloudFogFill,
-  BsQuestionLg,
-} from "react-icons/bs";
+import icon from "./WeatherLogo";
 import Sevendays from "./Sevendays";
 
 function Result({ data, forecast }) {
-  const icon = () => {
-    switch (data.weather[0].icon) {
-      case "01d":
-        return <BsFillSunFill size={140} color="rgb(255, 196, 0)" />;
-      case "01n":
-        return <BsFillMoonFill size={140} />;
-      case "02d":
-        return <BsCloudSunFill size={140} />;
-      case "02n":
-        return <BsCloudMoonFill size={140} />;
-      case "03d":
-        return <BsCloudsFill size={140} />;
-      case "03n":
-        return <BsCloudsFill size={140} />;
-      case "04d":
-        return <BsCloudsFill size={140} />;
-      case "04n":
-        return <BsCloudsFill size={140} />;
-      case "09d":
-        return <BsCloudDrizzleFill size={140} />;
-      case "09n":
-        return <BsCloudDrizzleFill size={140} />;
-      case "10d":
-        return <BsCloudRainFill size={140} />;
-      case "10n":
-        return <BsCloudRainFill size={140} />;
-      case "011d":
-        return <BsCloudRainHeavyFill size={140} />;
-      case "011n":
-        return <BsCloudRainHeavyFill size={140} />;
-      case "13d":
-        return <BsSnow size={140} />;
-      case "13n":
-        return <BsSnow size={140} />;
-      case "50d":
-        return <BsFillCloudFogFill size={140} />;
-      case "50n":
-        return <BsFillCloudFogFill size={140} />;
-      default:
-        return <BsQuestionLg size={140} />;
-    }
-  };
-
   return (
     <div>
       <div
@@ -84,7 +29,7 @@ function Result({ data, forecast }) {
           </h1>
           <Flag flag={data.sys.country} />
         </div>
-        {icon()}
+        {icon(data.weather[0].icon, 140)}
         <p>
           {data.main.temp.toFixed(0)}
           <sup>o</sup> C
