@@ -19,7 +19,7 @@ function Result({ data, forecast }) {
   const icon = () => {
     switch (data.weather[0].icon) {
       case "01d":
-        return <BsFillSunFill size={140} color="yellow" />;
+        return <BsFillSunFill size={140} color="rgb(255, 196, 0)" />;
       case "01n":
         return <BsFillMoonFill size={140} />;
       case "02d":

@@ -17,7 +17,7 @@ function Sevendays({ forecast }) {
   const icon = (params) => {
     switch (params) {
       case "01d":
-        return <BsFillSunFill size={50} color="yellow" />;
+        return <BsFillSunFill size={50} color="rgb(255, 196, 0)" />;
       case "01n":
         return <BsFillMoonFill size={50} />;
       case "02d":
