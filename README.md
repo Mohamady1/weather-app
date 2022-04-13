@@ -2,7 +2,7 @@
 
 ### [Author] ##Omar Ahmed Mohamady
 
-This project for current weather and for all seven days
+This project for current weather and for all seven days with (react & redux)
 
 ## Available Scripts
 
