@@ -18,7 +18,7 @@ export const current_data = (query, api) => async (dispatch) => {
       payload: res.coord.lon,
     });
   } catch {
-    alert("try again with correct values");
+    console.log("try again with correct values");
   }
 };
 
