@@ -13,10 +13,7 @@ function Header({ search, setQuery, query }) {
       }}
     >
       <h1 style={{ marginTop: "25px", fontSize: "2em", fontWeight: "bold" }}>
-        <a
-          style={{ textDecoration: "none", color: "white" }}
-          href="http://localhost:3000"
-        >
+        <a style={{ textDecoration: "none", color: "white" }} href="/">
           Weather App
         </a>
       </h1>
