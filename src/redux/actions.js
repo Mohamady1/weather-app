@@ -24,7 +24,7 @@ export const current_data = (query, api) => async (dispatch) => {
 
 //to dispatch forecast seven days data
 export const seven_days_data = (lat, lon, api) => async (dispatch) => {
-  if (lat > 0) {
+  if (lat > 0 || lat < 0) {
     const req = await fetch(
       `https://api.openweathermap.org/data/2.5/onecall?lat=${lat && lat}&lon=${
         lon && lon
