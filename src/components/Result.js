@@ -25,9 +25,15 @@ function Result({ data, forecast }) {
           }}
         >
           <h1>
-            {data.name}, {data.sys.country}
+            {data.name}, {data.sys.country === "IL" ? "PS" : data.sys.country}
           </h1>
-          <Flag flag={data.sys.country} />
+          <Flag
+            flag={
+              data.sys.country === "IL"
+                ? "https://www.crwflags.com/fotw/images/p/ps.gif"
+                : `https://countryflagsapi.com/png/${data.sys.country}`
+            }
+          />
         </div>
         {icon(data.weather[0].icon, 140)}
         <p

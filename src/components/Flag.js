@@ -6,7 +6,7 @@ function Flag({ flag }) {
       <img
         className="loop"
         style={{ width: "100px", height: "100px", borderRadius: "50%" }}
-        src={`https://countryflagsapi.com/png/${flag}`}
+        src={flag}
         alt=""
       />
     </div>
