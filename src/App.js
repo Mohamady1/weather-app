@@ -15,11 +15,12 @@ function App() {
 
   //country name
   const [query, setQuery] = React.useState("");
+  const f = query.replace(" ", "");
 
   const API_Key = "4a29cf92778614560202a2847757e184";
 
   const getData = async () => {
-    dispatch(current_data(query, API_Key));
+    dispatch(current_data(f, API_Key));
   };
 
   useEffect(() => {
