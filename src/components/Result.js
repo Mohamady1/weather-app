@@ -31,7 +31,7 @@ function Result({ data, forecast }) {
             flag={
               data.sys.country === "IL"
                 ? "https://www.crwflags.com/fotw/images/p/ps.gif"
-                : `https://flagcdn.com/48x36/${data.sys.country}.toLowerCase()}.png`
+                : `https://flagcdn.com/48x36/${data.sys.country.toLowerCase()}}.png`
             }
           />
         </div>
